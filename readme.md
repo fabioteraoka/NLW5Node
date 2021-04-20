@@ -29,4 +29,24 @@
     - [x]  O que veremos amanhã
 
 Codigo: missao espacial
+
+# Dia 2 - Iniciando com o Banco de Dados
+
+- [x]  O que aprendemos ontem
+- [x]  O que veremos hoje
+- [x]  Quais são as formas de trabalhar com Banco de Dados
+- [x]  Configurando o typeorm
+- [x]  O que são migrations
+- [x]  Criando as migrations
+- [x]  Criando as entidades
+- [x]  Criando os repositórios
+- [x]  Criando a rota das configurações
+
+![Dia%202%20-%20Iniciando%20com%20o%20Banco%20de%20Dados%202306916f957b46b082e08a5457f4e01d/chat.png](Dia%202%20-%20Iniciando%20com%20o%20Banco%20de%20Dados%202306916f957b46b082e08a5457f4e01d/chat.png)
+
+- [ ]  O que vamos aprender amanhã?
+
+Código
+
+##
     

@@ -6,7 +6,7 @@ app.listen(3333,()=> console.log("server is running on port 3333")
 )
 
 // * GET = busca
-// * POST = Criação
+// * POST = Criação 
 // * PUT = Alteração
 // * DELETE =  Apagar
 // * PATCH = Alterar uma informação especifica
@@ -20,6 +20,6 @@ app.get("/", (req,res)=>{
 
 app.post("/",(req,res)=>{
     return res.json({
-        message:"Usuario salvo com sucesso!"
+        message:"Usuário salvo com sucesso!"
     });
 })
