@@ -1,40 +1,55 @@
-import { getCustomRepository, Repository } from "typeorm";
+import { getCustomRepository } from "typeorm";
 import { Setting } from "../entities/Setting";
+
 import { SettingsRepository } from "../repositories/SettingsRepository";
 
 interface ISettingsCreate {
-    chat: boolean;
-    username: string;
+  chat: boolean;
+  username: string;
 }
 
 class SettingsService {
-    private settingsRepository: Repository<Setting>;
-    
-    constructor() {
-        this.settingsRepository = getCustomRepository(SettingsRepository);
-    }
+  private settingsRepository: SettingsRepository;
 
-    
-    async create({ chat , username}: ISettingsCreate){
-        // Select * from settings where username = "username" limit 1;
-        const userAlreadyExists = await this.settingsRepository.findOne({
-            username
-        })
+  constructor() {
+    this.settingsRepository = getCustomRepository(SettingsRepository);
+  }
 
-        if (userAlreadyExists) {
-            throw new Error("User already exists!");
-        }
-
-        const settings = this.settingsRepository.create({
-        chat,
-        username,
+  async create({ chat, username }: ISettingsCreate) {
+    const settingsAlreadyExists = await this.settingsRepository.findOne({
+      username,
     });
 
-    await this.settingsRepository.save(settings);
+    if (settingsAlreadyExists) {
+      throw new Error("Settings already exists.");
+    }
+
+    const setting = this.settingsRepository.create({
+      chat,
+      username,
+    });
+
+    await this.settingsRepository.save(setting);
+
+    return setting;
+  }
+
+  async findByUsername(username: string) {
+    const settings = await this.settingsRepository.findOne({ 
+      username 
+    });
 
     return settings;
-    }    
+  }
 
+  async update(username: string, chat: boolean) {
+    await this.settingsRepository
+      .createQueryBuilder()
+      .update(Setting)
+      .set({ chat })
+      .where("username = :username", { username })
+      .execute();
+  }
 }
 
-export {SettingsService}
+export { SettingsService };
