@@ -50,3 +50,23 @@ Código: em busca do proximo nivel
 
 ##
     
+# Dia 3 - Continuando a nossa aplicação
+
+- [x]  O que aprendemos ontem
+- [x]  O que vamos aprender hoje
+- [x]  Separar a regra de negócio de settings
+- [x]  Criar estrutura de user
+- [x]  Criar estrutura de messages
+    - [x]  Relacionamento Many To One
+
+![Dia%203%20-%20Continuando%20a%20nossa%20aplicac%CC%A7a%CC%83o%20b97e885b5fe24bee86e19fe4c0b0369e/chat.png](Dia%203%20-%20Continuando%20a%20nossa%20aplicac%CC%A7a%CC%83o%20b97e885b5fe24bee86e19fe4c0b0369e/chat.png)
+
+- [x]  Recap do que aprendemos hoje
+- [x]  Antecipar aula 04
+- [x]  **Código/Senha para participar do desafio**
+    - [ ]  
+- [x]  Participar da 
+
+
+npm run typeorm migration:create -- -n CreateUsers
+npm run typeorm migration:run
