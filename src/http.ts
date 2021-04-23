@@ -13,10 +13,14 @@ app.use(express.static(path.join(__dirname, "..", "public")));
 app.set("views", path.join(__dirname, "..", "public"));
 
 app.engine("html", require("ejs").renderFile);
-app.set("view engine", "ejs"); // verificar pois na aula estava com html
+app.set("view engine", "html"); // verificar pois na aula estava com html
 
 app.get("/pages/client", (request, response) => {
   return response.render("html/client.html");
+});
+
+app.get("/pages/admin", (request, response) => {
+  return response.render("html/admin.html");
 });
 
 const http = createServer(app); // criando Protocolo de http
