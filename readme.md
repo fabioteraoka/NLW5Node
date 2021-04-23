@@ -70,3 +70,7 @@ Código: em busca do proximo nivel
 
 npm run typeorm migration:create -- -n CreateUsers
 npm run typeorm migration:run
+npm add socket.io
+npm add @types/socket.io -D
+npm add socket.io-client
+npm add ejs

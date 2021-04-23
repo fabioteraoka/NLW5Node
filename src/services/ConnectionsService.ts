@@ -7,7 +7,9 @@ interface IConnectionCreate {
   user_id: string;
   admin_id?: string;
   id?: string;
+
 }
+
 
 class ConnectionsService {
   private connectionsRepository: ConnectionsRepository;
@@ -28,7 +30,7 @@ class ConnectionsService {
   }
 
   async findByUserId(user_id: string) {
-    const connection = this.connectionsRepository.findOne({ user_id });
+    const connection = await this.connectionsRepository.findOne({ user_id });
 
     return connection;
   }

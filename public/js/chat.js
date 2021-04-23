@@ -20,8 +20,7 @@ document.querySelector("#start_chat").addEventListener("click", (event) => {
             console.err(err);
         } else {
             console.log(call);
-        }
-        ;
+        };
         });
     });
 });
