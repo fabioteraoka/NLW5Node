@@ -2,8 +2,10 @@ import { http } from './http';
 import './websocket/client';
 import './websocket/admin';
 
-
-http.listen(3333, () => console.log('Server started on 3333'));
+// comando para colocar o heroku
+var porta = process.env.PORT || 8080;
+server.listen(porta, () => console.log('rodando'));
+// http.listen(3333, () => console.log('Server started on 3333'));
 // * GET = busca
 // * POST = Criação 
 // * PUT = Alteração
