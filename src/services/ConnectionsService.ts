@@ -32,7 +32,7 @@ class ConnectionsService {
 
     await this.connectionsRepository.save(connection);
 
-    // return connection;
+    return connection;
   }
 
   async findByUserId(user_id: string) {
@@ -62,7 +62,7 @@ class ConnectionsService {
       .set({ admin_id })
       .where("user_id = :user_id", {
         user_id,
-      }).execute
+      }).execute()
 
   }
 }

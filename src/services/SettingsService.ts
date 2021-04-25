@@ -47,7 +47,8 @@ class SettingsService {
       .createQueryBuilder()
       .update(Setting)
       .set({ chat })
-      .where("username = :username", { username })
+      .where("username = :username", { 
+        username, })
       .execute();
   }
 }
